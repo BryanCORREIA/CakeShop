@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="~/css/app.css"/>
     @RenderSection("styles", required: false)
 
-    <title>Hello, world!</title>
+    <link rel="icon" type="image/png" href="~/media/cupcake.png" />
+    <title>@RenderSection("title", required: true) - Cake Shop</title>
   </head>
   <body>
       <nav>
