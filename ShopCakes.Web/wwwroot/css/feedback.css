@@ -1,0 +1,22 @@
+﻿.feedback {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+}
+
+.feedback h2 {
+    letter-spacing: .8px;
+    font-variant: all-small-caps;
+    font-weight: 500;
+}
+
+.feedback-left {
+    flex: 2;
+    background-color: #FFFFFF;
+    padding: 10px
+}
+
+.feedback-right {
+    flex: 1;
+    background-color: #FAFAFA;
+    text-align: justify;
+    padding: 10px;
+}

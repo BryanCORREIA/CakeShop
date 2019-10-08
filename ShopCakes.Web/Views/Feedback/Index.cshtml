@@ -1,0 +1,50 @@
+﻿@model ShopCakes.Web.ViewModels.Feedback
+
+@section styles {
+    <link rel="stylesheet" href="~/css/feedback.css"/>
+}
+
+<div class="container">
+    <div class="feedback">
+        <div class="flex-container align-stretch">
+            <div class="feedback-left">
+                <h2>Votre avis</h2>
+                <form asp-action="Index" method="post">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label asp-for="Name"></label>
+                                <input asp-for="Name"/>
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Email"></label>
+                                <input asp-for="Email"/>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12">
+                                <label asp-for="Message"></label>
+                                <textarea asp-for="Message" rows="5"></textarea>
+                                <span asp-validation-for="Message" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label asp-for="ContactMe"></label>
+                                <input type="checkbox" asp-for="ContactMe"/>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="submit" value="Envoi de votre message"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="feedback-right">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus nulla et porta pretium. Maecenas malesuada dapibus nulla, vitae rutrum lectus pulvinar vitae. Vestibulum sit amet tempor justo, quis fringilla tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras dolor lacus, elementum vel risus nec, auctor ultricies ante. Cras suscipit nibh eros, et lacinia libero blandit sed. Proin vitae tincidunt ex. Nullam arcu sem, lacinia quis neque ac.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

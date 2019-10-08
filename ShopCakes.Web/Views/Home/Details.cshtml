@@ -1,0 +1,15 @@
+﻿@model ShopCakes.Web.Models.Pie
+
+@section styles {
+    <link rel="stylesheet" href="~/css/home.css"/>
+}
+
+<div class="container">
+    <div class="detail">
+        <div class="info-cake">
+            <h2>@Model.Name - @Model.Price.ToString()€</h2>
+        </div>
+        <img src="@Model.ImageUrl" class="detail-img" />
+        <p class="presentation-cake">@Model.LongDescription</p>
+    </div>
+</div>
