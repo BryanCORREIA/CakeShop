@@ -1,0 +1,12 @@
+﻿@model ShopCakes.Web.ViewModels.ClientViewModel
+
+    <form asp-action="Client" method="post" class="form-horizontal">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="CiviliteId" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <select asp-for="CiviliteId" asp-items="@Model.CiviliteItems" class="form-control"></select>
+                <span asp-validation-for="CiviliteId" class="text-danger"></span>
+            </div>
+        </div>
+    </form>

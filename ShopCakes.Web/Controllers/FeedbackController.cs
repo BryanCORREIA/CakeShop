@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ShopCakes.Web.Filters;
 using ShopCakes.Web.ViewModels;
 
 namespace ShopCakes.Web.Controllers
@@ -16,11 +17,12 @@ namespace ShopCakes.Web.Controllers
         }
 
         [HttpPost]
+        [LogFilter]
         public IActionResult Index(Feedback feedback)
         {
             if (ModelState.IsValid)
             {
-                // TODO SAVE
+                //TODO SAVE Database
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -28,5 +30,6 @@ namespace ShopCakes.Web.Controllers
                 return View(feedback);
             }
         }
+
     }
 }
